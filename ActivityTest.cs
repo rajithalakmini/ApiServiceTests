@@ -11,7 +11,13 @@ public class ActivityTest
     {
         _client = new RestClient("https://fakerestapi.azurewebsites.net/api/v1"); // Replace with your Swagger base URL
     }
+    /*
+    Updates:
+    - Instead of Assert.bla, try out the Shoudly() library, https://docs.shouldly.org/documentation/getting-started - There will be some references in customer service external tests 
+    - Console.WriteLine won't work in tests, replace with the ITestOutputHelper
+    - Instead of using an anonymous object for sending a Json Request, create a class that represents what that data looks like, and use the Builder pattern 
 
+    */
     [Fact]
     public async Task GetActivityById_ShouldReturnSuccess()
     {
